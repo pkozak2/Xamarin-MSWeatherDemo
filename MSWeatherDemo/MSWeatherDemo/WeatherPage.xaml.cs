@@ -20,8 +20,9 @@ namespace MSWeatherDemo
         }
         private async void getWeatherBtn_Clicked(object sender, EventArgs e)
         {
-            Weather weather = await Core.GetWeather("London");
-            getWeatherBtn.Text = weather.Title;
+            Weather weather = await Core.GetWeather(nameEntry.Text);
+            this.BindingContext = weather;
+            getWeatherBtn.Text = "Search again";
         }
     }
 }

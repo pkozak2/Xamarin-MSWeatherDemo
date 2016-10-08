@@ -12,7 +12,7 @@ namespace MSWeatherDemo
         {
             string key = ApiKeys.apiKey;
             string queryAddress = "http://api.openweathermap.org/data/2.5/weather?q="
-                + cityName + ",us&appid=" + key + "&units=imperial";
+                + cityName + "&appid=" + key + "&units=imperial";
 
             dynamic results = await DataService.getDataFormService(queryAddress).ConfigureAwait(false);
 
